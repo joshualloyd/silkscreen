@@ -2,9 +2,10 @@ const remote = require('electron').remote;
 const main = remote.require('./main.js');
 
 
-var button = document.createElement('button');
-button.textContent = 'build site';
-button.addEventListener('click', () => {
+var buildButton = document.createElement('button');
+buildButton.textContent = 'build site';
+buildButton.addEventListener('click', () => {
+  console.log('buildSite button clicked');
   main.buildSite();
 }, false);
-document.body.appendChild(button);
+document.body.appendChild(buildButton);
